@@ -4,7 +4,7 @@ import CustomButton from './CustomButton';
 
 
 
-const AlPicker = ({ prompt, setPrompt, generatingImg, handleSubmit }) => {
+const AIPicker = ({ prompt, setPrompt, generatingImg, handleSubmit }) => {
   return (
     <div className='aipicker-container'>
       <textarea 
@@ -18,7 +18,7 @@ const AlPicker = ({ prompt, setPrompt, generatingImg, handleSubmit }) => {
         {generatingImg ? (
           <CustomButton
           type="outline"
-          title="Aking AI..."
+          title="Asking AI..."
           customStyles="text-xs"
           />
         ) : (
@@ -43,4 +43,4 @@ const AlPicker = ({ prompt, setPrompt, generatingImg, handleSubmit }) => {
   )
 }
 
-export default AlPicker
+export default AIPicker

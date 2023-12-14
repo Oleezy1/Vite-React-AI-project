@@ -80,18 +80,18 @@ const Customizer = () => {
 
     state[decalType.stateProperty] = result;
     
-    if(!activeFilterTab[decalType.FilterTab]) {
-      handleActiveFilterTab(decalType.FilterTab)
+    if(!activeFilterTab[decalType.filterTab]) {
+      handleActiveFilterTab(decalType.filterTab)
     }
   }
-  const handleActiveFilterTab = (tabname) => {
-    switch (tabname) {
+  const handleActiveFilterTab = (tabName) => {
+    switch (tabName) {
       case "logoShirt":
-        state.isLogoTexture = !activeFilterTab[tabname];
+        state.isLogoTexture = !activeFilterTab[tabName];
         
         break;
       case "stylishShirt":
-        state.isFullTexture = !activeFilterTab[tabname];
+        state.isFullTexture = !activeFilterTab[tabName];
         break;
       default:
         state.isLogoTexture = true;
@@ -104,7 +104,7 @@ const Customizer = () => {
     setActiveFilterTab((prevState) => {
       return {
         ...prevState,
-        [tabname]: !prevState[tabname]
+        [tabName]: !prevState[tabName]
       }
     })
   }
